@@ -1,0 +1,90 @@
+.contactManager {
+  margin: 4rem;
+  > p {
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .twoPartDeveloper {
+    max-width: 100rem;
+    width: 99%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    .developerImage {
+      img {
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+    }
+    .managerInfo {
+      padding: 2rem;
+      width: fit-content;
+      margin: 3rem auto;
+
+      .commonManagerBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        margin: 0.7rem;
+        font-family: "Quicksand", sans-serif;
+        border-bottom: 1px solid #dee2e6;
+
+        > p {
+          margin: 1rem;
+          font-size: 1.8rem;
+          font-weight: 500;
+        }
+
+        strong {
+          font-size: 1.8rem;
+          color: #3bb77e;
+
+          a {
+            color: #3bb77e;
+            list-style: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .contactManager {
+    > p {
+      margin-bottom: 4rem !important;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    .twoPartDeveloper {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .commonManagerBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem !important;
+  }
+}
+
+@media (max-width: 325px) {
+  .contactManager {
+    margin: 1rem !important;
+    > .twoPartDeveloper {
+      > .managerInfo {
+        padding: 0 !important;
+      }
+    }
+  }
+}

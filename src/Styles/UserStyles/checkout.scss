@@ -1,0 +1,119 @@
+.checkOutSection {
+  margin-bottom: 5rem;
+
+  h2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .paymentForm {
+    @include giveBoxShadow;
+    border: 1px solid #dedad6;
+    max-width: 50rem;
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 1.4rem;
+
+    .paymentImages {
+      display: flex;
+      justify-content: center;
+      img {
+        height: 6rem;
+      }
+    }
+
+    .paymentAmount {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      p {
+        font-size: 2.2rem;
+      }
+    }
+
+    .paymentInput {
+      font-size: 1.4rem;
+      margin-top: 1.2rem;
+
+      p {
+        font-weight: 600;
+      }
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.6rem;
+        border: none;
+        border: 1px solid #dedad6;
+        border-radius: 0.5rem;
+        outline: none;
+
+        &:focus {
+          border: 1px solid #3bb77e;
+        }
+      }
+    }
+
+    .expireWrapper {
+      display: flex;
+
+      .pBox1 {
+        flex: 1;
+        input {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      .pBox2 {
+        flex: 1;
+        input {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    button {
+      font-size: 1.6rem;
+      padding: 1rem 0;
+      color: white;
+      background-color: #3bb77e;
+      border: none;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      &:hover {
+        background-color: #249b64;
+      }
+    }
+  }
+}
+
+// .checkOutContainer {
+//   max-width: 400px;
+//   width: 100%;
+//   margin: auto;
+//   > form {
+//     @include flex(column, flex-start, stretch, 2rem);
+
+//     > button {
+//       cursor: pointer;
+//       border: none;
+//       outline: none;
+//       padding: 0.5rem;
+//       background-color: rgb(0, 104, 136);
+//       color: rgb(46, 46, 46);
+//       width: 100%;
+//       font-size: 1.8rem;
+//     }
+//   }
+// }

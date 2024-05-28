@@ -1,0 +1,242 @@
+.searchSection {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: space-between;
+  color: #343a40;
+  padding: 2rem;
+  margin: 3rem auto;
+
+  .searchFilter {
+    border: 0.8px solid #ececec;
+    border-radius: 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 5px 5px 15px 0px;
+    height: fit-content;
+    min-width: 27rem;
+    max-width: 27rem;
+    padding: 2rem 1.4rem;
+
+    h2 {
+      font-family: "Quicksand", sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      border-bottom: 1px solid #ececec;
+      color: #3bb77e;
+    }
+
+    p {
+      display: none;
+      font-size: 1.3rem;
+      margin: 1rem 0;
+      text-align: end;
+      font-weight: 500;
+      color: #3bb77e;
+    }
+
+    .sort,
+    .price,
+    .color,
+    .material,
+    .size {
+      padding: 1rem;
+      padding-right: 8rem;
+
+      h3 {
+        font-family: "Lato", sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .centerBox {
+        margin-top: 0.5rem;
+
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+          position: absolute;
+          left: -9999px;
+        }
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label {
+          font-family: "Lato", sans-serif;
+          position: relative;
+          padding-left: 2.8rem;
+          cursor: pointer;
+          line-height: 2rem;
+          display: inline-block;
+          color: #666;
+          font-size: 1.4rem;
+          letter-spacing: 0.01rem;
+        }
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 18px;
+          height: 18px;
+          border: 1px solid #ddd;
+          border-radius: 100%;
+          background: #fff;
+        }
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+          content: "";
+          width: 12px;
+          height: 12px;
+          background: #3bb77e;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          border-radius: 100%;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+        }
+        [type="radio"]:not(:checked) + label:after {
+          opacity: 0;
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        [type="radio"]:checked + label:after {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .searchItems {
+    position: relative;
+    width: 120rem;
+    max-width: 120rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 3.4rem;
+
+    .notFound {
+      img {
+        height: 35rem;
+      }
+      p {
+        font-size: 2.6rem;
+        text-align: center;
+        font-weight: 800;
+        font-family: "Quicksand", sans-serif;
+      }
+    }
+  }
+
+  article {
+    font-family: "Lato", sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    button {
+      cursor: pointer;
+      font-family: "Lato", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: white;
+      background-color: #3bb77e;
+      padding: 0.7rem 1.6rem;
+      border: none;
+      border-radius: 0.3rem;
+      margin: 0 2rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #fdc040;
+      }
+
+      &:disabled {
+        background-color: #2a865b;
+        cursor: not-allowed;
+      }
+    }
+
+    span {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.searchLatest {
+  font-family: "Quicksand", sans-serif;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  h2 {
+    font-size: 3.4rem;
+    color: #343a40;
+    padding: 1rem;
+  }
+}
+
+// font-family: "Lato", sans-serif;
+
+@media (max-width: 872px) {
+  .searchSection {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    .searchFilter {
+      min-width: 100%;
+
+      .filters {
+        display: flex;
+        overflow: auto;
+        &::-webkit-scrollbar {
+          display: none !important;
+        }
+
+        .sort,
+        .price,
+        .color,
+        .material,
+        .size {
+          min-width: 18rem;
+          padding: 1rem;
+
+          .centerBox {
+            margin-top: 0.7rem;
+          }
+        }
+      }
+    }
+
+    .searchItems {
+      width: fit-content;
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 835px) {
+  .searchSection {
+    .searchFilter {
+      p {
+        display: block;
+      }
+    }
+
+    .searchItems {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  article {
+    min-width: 25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

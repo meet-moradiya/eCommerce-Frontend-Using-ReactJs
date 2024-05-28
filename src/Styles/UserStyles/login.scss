@@ -1,0 +1,126 @@
+.loginWrapper {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 16px 0px;
+  border-radius: 0.7rem;
+  max-width: 45rem;
+  padding: 4rem;
+  margin: 3rem auto;
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .loginForm {
+    .brdinp {
+      border: 1px solid #3bb77e;
+      border-radius: 0.7rem;
+      overflow: hidden;
+    }
+
+    .form-group {
+      margin: 1.4rem 0;
+
+      input {
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 1.2rem;
+        outline: none;
+        border: none;
+      }
+      .pwd {
+        display: flex;
+        justify-content: space-between;
+
+        .icon {
+          min-width: 4rem;
+          height: 4rem;
+          width: 4rem;
+          color: #ccc;
+          border-radius: 100%;
+          margin: auto 0;
+          border: none;
+
+          svg {
+            color: #000 !important;
+            opacity: 1;
+            font-size: 2rem;
+          }
+        }
+      }
+      p {
+        text-align: center;
+        font-size: 1.4rem;
+      }
+
+      button {
+        background-color: white;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: 0.02rem;
+        color: #212529;
+        padding: 0.7rem;
+        border-radius: 0.7rem;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        border: 1px solid #3bb77e;
+
+        &:hover {
+          background-color: #f8f9fa;
+        }
+      }
+
+      img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.2rem;
+      }
+    }
+
+    .textCenter {
+      text-align: center;
+      font-size: 1.4rem;
+
+      a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #3bb77e;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .signinbtn {
+      margin: 3rem 0;
+
+      button {
+        background-color: #3bb77e;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: 0.02rem;
+        display: block;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 0.7rem;
+        cursor: pointer;
+        outline: 0;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-color: #fdc040;
+        }
+      }
+    }
+  }
+}
+
+.errorBox {
+  text-align: center;
+  font-size: 1.4rem;
+  color: red;
+}

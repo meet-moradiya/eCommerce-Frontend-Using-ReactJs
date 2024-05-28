@@ -1,0 +1,173 @@
+.mainContactForm {
+  padding: 3rem;
+  color: #495057;
+  font-family: "Quicksand", sans-serif;
+
+  .getInTouch {
+    font-size: 2rem;
+  }
+
+  .form-input,
+  textarea {
+    font-family: "Quicksand", sans-serif;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  .byClick {
+    font-size: 1.5rem;
+  }
+}
+
+.contain {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  border: 1px solid #bdbdbd;
+  @include giveBoxShadow;
+  border-radius: 1.5rem;
+}
+
+.contact-wrapper {
+  margin: auto 0;
+
+  ul {
+    list-style: none;
+
+    li {
+      font-size: 1.8rem;
+    }
+
+    .contact-info,
+    .email-info {
+      font-weight: 800;
+      font-size: 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+}
+
+.uline {
+  font-size: 2.8rem;
+  margin: 1.4rem 0;
+  font-weight: 800;
+}
+.uline:after {
+  content: "";
+  display: block;
+  width: 13%;
+  padding-top: 7px;
+  border-bottom: 3px solid #495057;
+}
+
+.highlight-text {
+  color: #4bb991;
+}
+
+.hightlight-contact-info {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.email-info {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .mainContactForm {
+    padding: 1rem;
+  }
+
+  .contain {
+    border: none;
+    box-shadow: none;
+    padding: 1rem;
+  }
+  .uline:after {
+    width: 25%;
+  }
+}
+
+.form-input:focus,
+textarea:focus {
+  outline: 1.5px solid #264653;
+}
+
+.form-input,
+textarea {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  resize: none;
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .wrapper > * {
+    padding: 2em 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-wrapper {
+    margin-top: 3rem;
+  }
+
+  .contactBtns {
+    justify-content: space-around !important;
+    button {
+      padding: 0.6rem 1.4rem !important;
+    }
+  }
+}
+
+#submit-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.full-width {
+  grid-column: 1;
+}
+
+.form-input,
+textarea {
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.error {
+  color: #ec1c24;
+}
+
+.contactBtns {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    font-size: 1.6rem;
+    color: white;
+    background-color: #3bb77e;
+    border: none;
+    border-radius: 0.8rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+
+    &:hover {
+      background-color: #fdc040;
+    }
+  }
+}

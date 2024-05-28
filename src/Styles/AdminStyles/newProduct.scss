@@ -1,0 +1,407 @@
+.article {
+  padding: 1rem 0;
+  background-color: #f4f4f411;
+
+  .mainlogo {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  > h1 {
+    margin: 0 2rem;
+  }
+
+  > h4 {
+    @include heading(0.17rem, 700);
+    font-size: 3rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.productForm {
+  position: relative;
+  max-width: 1200px;
+  width: 96%;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding-bottom: 5rem;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.productForm .formBtns {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 25rem;
+
+  > .formBtn1,
+  > .formBtn2 {
+    a {
+      text-decoration: none;
+    }
+  }
+  button {
+    @include buttonStyle;
+  }
+}
+
+.productForm .textInput {
+  flex: 2 2;
+}
+.productForm .imgInput {
+  flex: 1 1;
+}
+
+.productForm .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin: 3rem;
+}
+
+.productForm .img {
+  @include flex(column, center, center, 1rem);
+  @include sqaure(27rem);
+  background-color: #343a4009;
+  position: relative;
+  font-size: 2rem;
+  margin: 3.5rem auto;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  > .imagePreview {
+    @include sqaure(27rem);
+  }
+
+  > input {
+    display: none;
+  }
+
+  > label {
+    @include flex(column, center, center, 0rem);
+    cursor: pointer;
+    font-weight: 500;
+    color: #343a40;
+  }
+}
+
+.productForm .box label {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.productForm .textInput .priceBox input::-webkit-outer-spin-button,
+.productForm .textInput .priceBox input::-webkit-inner-spin-button,
+.productForm .textInput .mrpBox input::-webkit-outer-spin-button,
+.productForm .textInput .mrpBox input::-webkit-inner-spin-button,
+.productForm .textInput .stockBox input::-webkit-outer-spin-button,
+.productForm .textInput .stockBox input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.productForm .box input {
+  border: 1px solid #6c757d;
+  color: #343a40;
+  font-size: 1.8rem;
+  padding: 0.5rem 0.4rem;
+  border-radius: 0.7rem;
+  outline: none;
+
+  &:focus {
+    border: 2px solid #212529;
+  }
+}
+
+.productForm .box textarea {
+  border: 1px solid #6c757d;
+  height: 200px;
+  font-size: 1.8rem;
+  padding: 0.5rem 0.4rem;
+  border-radius: 0.7rem;
+  resize: vertical;
+  font-family: "Poppins", sans-serif;
+  color: #343a40;
+}
+
+.sizes,
+.category {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #6c757d;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 0.5rem 0.4rem;
+  border-radius: 0.7rem;
+}
+
+.sizes:hover,
+.category:hover {
+  border: 1px solid #212529;
+}
+
+.sizes option,
+.category option {
+  background-color: #fff;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.productForm {
+  .deletePopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #343a40;
+    background-color: #fff0f3;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 50rem;
+    transition: all 0.2s ease-in-out;
+    z-index: 9999;
+
+    .pNameP {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    .skuP {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+
+    .msgP {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 1.4rem;
+    }
+
+    .deleteP {
+      margin-top: 1.6rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      z-index: 49;
+
+      .cancelP {
+        color: white;
+        background-color: #74c69d;
+        text-transform: capitalize;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+        padding: 0.4rem 1.5rem;
+
+        &:hover {
+          background-color: #52b788;
+        }
+      }
+
+      .deleteBP {
+        color: white;
+        background-color: #ef233c;
+        text-transform: capitalize;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+        padding: 0.4rem 1.5rem;
+
+        &:hover {
+          background-color: #d90429;
+        }
+      }
+
+      > .spinner {
+        margin: 0 1.4rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 5px solid #d90429;
+        animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
+      }
+
+      @keyframes spinner-bulqg1 {
+        0% {
+          clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+        }
+
+        12.5% {
+          clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+        }
+
+        25% {
+          clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+        }
+
+        50% {
+          clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+        }
+
+        62.5% {
+          clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+        }
+
+        75% {
+          clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+        }
+
+        100% {
+          clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+        }
+      }
+
+      @keyframes spinner-oaa3wk {
+        0% {
+          transform: scaleY(1) rotate(0deg);
+        }
+
+        49.99% {
+          transform: scaleY(1) rotate(135deg);
+        }
+
+        50% {
+          transform: scaleY(-1) rotate(0deg);
+        }
+
+        100% {
+          transform: scaleY(-1) rotate(-135deg);
+        }
+      }
+    }
+  }
+  .deletePopup.show {
+    display: block;
+  }
+}
+
+.dltProduct {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  button {
+    color: white;
+    background-color: #ef233c;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #d90429;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .productForm {
+    display: flex;
+    flex-direction: column;
+
+    .dltProduct {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .productForm .formBtns {
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .productForm .imgInput {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.productForm {
+  .formBtns {
+    .formBtn2 {
+      > .spinner {
+        width: 3rem;
+        height: 3rem;
+        margin: 0 1.4rem;
+        border-radius: 50%;
+        border: 5px solid #343a40;
+        animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
+      }
+
+      @keyframes spinner-bulqg1 {
+        0% {
+          clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+        }
+
+        12.5% {
+          clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+        }
+
+        25% {
+          clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+        }
+
+        50% {
+          clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+        }
+
+        62.5% {
+          clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+        }
+
+        75% {
+          clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+        }
+
+        100% {
+          clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+        }
+      }
+
+      @keyframes spinner-oaa3wk {
+        0% {
+          transform: scaleY(1) rotate(0deg);
+        }
+
+        49.99% {
+          transform: scaleY(1) rotate(135deg);
+        }
+
+        50% {
+          transform: scaleY(-1) rotate(0deg);
+        }
+
+        100% {
+          transform: scaleY(-1) rotate(-135deg);
+        }
+      }
+    }
+  }
+}

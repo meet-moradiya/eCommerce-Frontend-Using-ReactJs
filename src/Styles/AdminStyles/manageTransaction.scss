@@ -1,0 +1,206 @@
+.transactionPageSection {
+  background-color: #f8f9fa;
+  padding: 0 0 3rem 0;
+  min-height: 100vh;
+
+  .mainlogo {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h4 {
+    @include heading(0.17rem, 700);
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: #212529;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .deletePopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #343a40;
+    background-color: #fff0f3;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 50rem;
+    transition: all 0.2s ease-in-out;
+    z-index: 9999;
+
+    .pNameP {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .msgP {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .deleteP {
+      margin-top: 1.6rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      z-index: 49;
+
+      .cancelP {
+        color: white;
+        background-color: #74c69d;
+        text-transform: capitalize;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+        padding: 0.4rem 1.5rem;
+
+        &:hover {
+          background-color: #52b788;
+        }
+      }
+
+      .deleteBP {
+        color: white;
+        background-color: #ef233c;
+        text-transform: capitalize;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+        padding: 0.4rem 1.5rem;
+
+        &:hover {
+          background-color: #d90429;
+        }
+      }
+    }
+  }
+  .deletePopup.show {
+    display: block;
+  }
+}
+
+.mainOrderBox {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 96%;
+  max-width: 120rem;
+  margin: 2rem auto;
+  padding: 0.5rem 2rem;
+
+  > h4 {
+    font-size: 3.4rem;
+    color: #343a40;
+    text-align: center;
+    margin: 3rem;
+    border-bottom: 1px solid #343a40;
+  }
+
+  > .orderItemCard {
+    max-width: fit-content;
+    padding: 0.5rem 3rem;
+    margin: 0 auto;
+
+    > .orderCard {
+      @include flex;
+      margin: 2.5rem auto;
+
+      > img {
+        border-radius: 2rem;
+      }
+
+      > .tempOrderDetail .tempNameBox {
+        max-width: 68rem;
+        text-decoration: none;
+        font-size: 2.2rem;
+        color: #343a40;
+        margin: auto 2.5rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+          color: #212529;
+        }
+      }
+
+      > .tempOrderDetail p {
+        font-size: 1.6rem;
+        color: #343a40;
+        margin: auto 2.5rem;
+        font-weight: 400;
+      }
+
+      > span {
+        font-size: 1.8rem;
+        color: #343a40;
+        margin: auto 2.5rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  > .orderDetail {
+    max-width: fit-content;
+    padding: 0.5rem 3rem;
+    margin: 0 auto 3rem auto;
+    @include flex(row, space-between, flex-start, 5.5rem);
+
+    h5 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #212529;
+      margin-bottom: 1.4rem;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: #212529;
+    }
+
+    p {
+      margin: 0.5rem 0;
+      font-size: 1.6rem;
+      color: #343a40;
+    }
+
+    button {
+      @include buttonStyle;
+      margin: 0.7rem;
+      margin-left: 0;
+    }
+
+    .addressClass {
+      max-width: 40rem;
+      text-wrap: wrap;
+    }
+
+    .orderStatus {
+      font-weight: 600;
+      display: inline-block;
+      margin: 0.5rem 0;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .orderDetail {
+    flex-direction: column !important;
+  }
+
+  .orderCard {
+    flex-wrap: wrap;
+  }
+}

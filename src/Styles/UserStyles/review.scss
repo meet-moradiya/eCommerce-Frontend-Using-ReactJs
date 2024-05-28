@@ -1,0 +1,76 @@
+.reviewFormDiv {
+  margin: 3rem auto;
+  margin-bottom: 6rem;
+  font-family: "Quicksand", sans-serif;
+
+  .reviewForm {
+    @include giveBoxShadow;
+    border: 1px solid #dedad6;
+    border-radius: 1rem;
+    max-width: 75rem;
+    margin: 1rem auto;
+    padding: 1.6rem;
+
+    > h2 {
+      text-align: center;
+      font-size: 3.6rem;
+      font-weight: 600;
+    }
+
+    > .starRatingInput {
+      margin: 2rem auto;
+      text-align: center;
+
+      .antRate {
+        font-size: 7rem;
+      }
+    }
+
+    > .productReviewInput {
+      > textarea {
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid #3bb77e;
+      }
+    }
+
+    > .reviewSubmitButton {
+      margin: 2rem auto;
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+
+      > button {
+        font-family: "Quicksand", sans-serif;
+        color: white;
+        background-color: #3bb77e;
+        transition: all 0.2s ease-in-out;
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 0.3rem 1.5rem;
+
+        &:hover {
+          background-color: #fdc040;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .reviewForm {
+    margin: 1rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .reviewForm {
+    .starRatingInput {
+      .antRate {
+        font-size: 5rem !important;
+      }
+    }
+  }
+}

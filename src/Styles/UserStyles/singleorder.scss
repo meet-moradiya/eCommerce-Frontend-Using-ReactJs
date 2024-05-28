@@ -1,0 +1,113 @@
+.userOrderSection {
+  font-family: "Quicksand", sans-serif;
+
+  .orderedItems {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-bottom: 1px solid #ced4da;
+
+    .orderedItemImgaes {
+      padding: 1rem;
+      img {
+        border: 1px solid #3bb77e;
+        border-radius: 1rem;
+      }
+    }
+
+    .orderedItemDetails {
+      width: fit-content;
+      padding: 1rem;
+
+      strong {
+        color: #3bb77e;
+      }
+
+      .orderProductName {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #253d4e;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: #3bb77e;
+        }
+      }
+
+      .orderProductBrand {
+        margin-bottom: 1.6rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+      .orderProductSize,
+      .orderProductQty,
+      .orderProductPrice,
+      .orderProductTotalPrice {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .checkOutBox {
+    border: 1px solid #e9ecef;
+    border-radius: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    width: 50rem;
+    height: fit-content;
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+
+    .box {
+      border: 1px solid #e9ecef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem;
+
+      .title {
+        display: inline-block;
+      }
+      .amount {
+        display: inline-block;
+        font-size: 2.2rem;
+        font-weight: 800;
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .userOrderSection {
+    .orderedItems {
+      width: fit-content;
+      flex-wrap: wrap;
+      gap: 0rem;
+      padding: 3rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .userOrderSection {
+    .orderedItems {
+      margin: 0 auto !important;
+      padding: 1rem;
+    }
+  }
+
+  .checkOutBox {
+    width: 39rem !important;
+    border-radius: 0 !important;
+    padding: 1.2rem !important;
+  }
+}

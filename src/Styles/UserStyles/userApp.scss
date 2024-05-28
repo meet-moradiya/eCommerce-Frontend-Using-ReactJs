@@ -1,0 +1,68 @@
+@import "header";
+@import "home";
+@import "slider";
+@import "category";
+@import "latestproducts";
+@import "footer";
+@import "dealofday";
+@import "productcard";
+@import "cart";
+@import "shipping";
+@import "login";
+@import "account";
+@import "scrolltopbtn";
+@import "search";
+@import "loading";
+@import "checkout";
+@import "singleproduct";
+@import "singleorder";
+@import "contact";
+@import "manager";
+@import "review";
+@import "about";
+@import "deals";
+@import "privacypolicy";
+@import "follow";
+
+.productLatestProduct {
+  font-family: "Quicksand", sans-serif;
+  padding: 2rem 3.6rem;
+  border: 1px solid #dedad6;
+
+  h2 {
+    font-size: 3.4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #343a40;
+  }
+}
+
+.pageNavigation {
+  font-family: "Quicksand", sans-serif;
+  border-bottom: 1px solid #ced4da;
+  font-weight: 800;
+  font-size: 1.6rem;
+  padding: 1.8rem;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 0.3rem;
+    color: #3bb77e;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #ffbf69;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .pageNavigation {
+    padding-left: 0.2rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

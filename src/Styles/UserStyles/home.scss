@@ -1,0 +1,36 @@
+.home {
+  .sliderSection {
+    margin: 3rem auto;
+    width: 99.2%;
+  }
+  .categoryContainer {
+    font-family: Quicksand, sans-serif;
+    padding: 1rem;
+    margin: 1.6rem 0.5rem;
+
+    h2 {
+      text-align: center;
+      font-size: 4rem;
+      color: #343a40;
+      margin-bottom: 1rem;
+    }
+  }
+  .homeLatestProducts {
+    font-family: Quicksand, sans-serif;
+    margin: 1.6rem auto;
+    width: 99%;
+    max-width: 149rem;
+
+    h2 {
+      text-align: center;
+      font-size: 4rem;
+      color: #343a40;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .sliderSection {
+    margin: 0 auto !important;
+  }
+}
