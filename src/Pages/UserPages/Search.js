@@ -68,9 +68,6 @@ function Search() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
     const params = new URLSearchParams(location.search);
     setSearch(params.get("search"));
   }, [location.search]);
